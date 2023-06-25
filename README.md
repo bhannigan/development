@@ -5,16 +5,16 @@ code development image with preloaded software<br>
 - azure cli<br>
 - aws cli<br>
 
-## BUILD
+### shell build
     git clone https://github.com/bhannigan/vaultwarden-manage.git
     cd vaultwarden-manage
     sudo docker build --tag vaultwarden-manage .
 
-or in Portainer<br>
-    images > build a new image
+### Portainer build
+    images \> build a new image
     name = **development**
     url = https://github.com/bhannigan/development.git
     build
 
-# TODO
+## TODO
 - add packer
