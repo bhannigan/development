@@ -10,10 +10,10 @@ code development image with preloaded software<br>
     cd vaultwarden-manage
     sudo docker build --tag vaultwarden-manage .
 
-or in Portainer
+or in Portainer<br>
     images > build a new image
-      name = **development**
-      url = https://github.com/bhannigan/development.git
+    name = **development**
+    url = https://github.com/bhannigan/development.git
     build
 
 # TODO
