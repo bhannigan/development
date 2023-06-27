@@ -1,4 +1,4 @@
-<## set base image
+## set base image
 #
 
   FROM phusion/baseimage-customizable
