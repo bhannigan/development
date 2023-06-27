@@ -1,4 +1,4 @@
-## set base image
+<## set base image
 #
 
   FROM phusion/baseimage-customizable
@@ -59,7 +59,7 @@ RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
 ## add a user account
 #
-  RUN useradd -ms /bin/bash user
+#  RUN useradd -ms /bin/bash user
 
 # copy contents of local src directory to the working directory
 # COPY ./src src
