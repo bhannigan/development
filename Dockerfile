@@ -1,15 +1,10 @@
 ## set base image
 #
 
-  FROM phusion/baseimage-customizable
-
+  FROM debian
+  
 # Set correct environment variables.
   ENV HOME /root
-  
-# Use baseimage-docker's init process.
-  CMD ["/sbin/my_init"]
-
-  RUN /pd_build/python.sh
   
 ## install packages
 #
@@ -17,17 +12,17 @@
 # Clean up APT when done.
 RUN apt-get clean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 
-#  ARG DEBIAN_FRONTEND=noninteractive
-#
-#  RUN apt-get update               \
-#   && apt-get upgrade -y           \
-#   && apt-get install -y apt-utils \
-#   && apt-get install -y           \
-#        vim                        \
-#        less                       \
-#                lsb-release                \
-#   && apt-get clean                \
-#   && rm -rf /var/lib/apt/lists/*
+ ARG DEBIAN_FRONTEND=noninteractive
+
+ RUN apt-get update               \
+  && apt-get upgrade -y           \
+#  && apt-get install -y apt-utils \
+  && apt-get install -y           \
+       vim                        \
+       less                       \
+       lsb-release                \
+  && apt-get clean                \
+  && rm -rf /tmp/* /var/tmp/* /var/lib/apt/lists/*
 
 
 ## install terraform
