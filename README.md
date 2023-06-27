@@ -6,13 +6,13 @@ code development image with preloaded software<br>
 - aws cli<br>
 
 ### shell build
-    git clone https://github.com/bhannigan/vaultwarden-manage.git
-    cd vaultwarden-manage
-    sudo docker build --tag vaultwarden-manage .
+    git clone https://github.com/bhannigan/development.git
+    cd development
+    sudo docker build --tag development .
 
 ### Portainer build
     images > build a new image
-    name = **development**
+    name = development
     url = https://github.com/bhannigan/development.git
     build
 
